@@ -1,5 +1,8 @@
 name: Nifty Scanner Every 10 Min
 
+env:
+  TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
+
 on:
   schedule:
     - cron: '*/10 * * * *'  # Every 10 minutes (in UTC)
@@ -24,3 +27,5 @@ jobs:
 
       - name: Run pattern scanner
         run: python scanner.py
+        env:
+          TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
