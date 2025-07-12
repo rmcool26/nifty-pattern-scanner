@@ -3,7 +3,9 @@ import pandas as pd
 
 import requests
 
-TELEGRAM_TOKEN = '8077075856:AAEsXisqnXbT-UF6YoljZnJ6-8P8a6cCEb0'
+import os
+
+TELEGRAM_TOKEN = os.getenv("TELEGRAM_TOKEN")
 TELEGRAM_CHAT_ID = '7492825690'
 
 def send_telegram_alert(message):
