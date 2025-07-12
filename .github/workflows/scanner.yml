@@ -1,4 +1,4 @@
-name: Nifty Scanner Every 10 Min
+name: Nifty Scanner Every 5 Min
 
 env:
   TELEGRAM_TOKEN: ${{ secrets.TELEGRAM_TOKEN }}
